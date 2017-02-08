@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/Users/piotrmarcinkiewicz/src/swtest/samsung/new/bfsshortreach'
+let g:netrw_dirhist_2='/Users/piotrmarcinkiewicz/src/sensorlogger/SensorLogger/service_tags'
+let g:netrw_dirhist_3='/Users/piotrmarcinkiewicz/src/dziennik_studentów/.git'
+let g:netrw_dirhist_4='/Users/piotrmarcinkiewicz/src/ttsnodejsdemoatbluemix/.git'
+let g:netrw_dirhist_5='/Users/piotrmarcinkiewicz/src/ttsnodejsdemoatbluemix'
+let g:netrw_dirhist_6='/Users/piotrmarcinkiewicz/src'
+let g:netrw_dirhist_7='/Users/piotrmarcinkiewicz/src/TZAND'
+let g:netrw_dirhist_8='/Users/piotrmarcinkiewicz/src/TZAND/.git'
