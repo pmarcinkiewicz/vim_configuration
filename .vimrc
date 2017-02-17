@@ -168,8 +168,8 @@ if has('spell')
       let g:myLang = g:myLang + 1
       if g:myLang >= len(g:myLangList) | let g:myLang = 0 | endif
 
-      if g:myLang == 0 | setlocal spell spelllang=en_us | endif
-      if g:myLang == 1 | setlocal spell spelllang=pl | endif
+      if g:myLang == 0 | setlocal spell spelllang=en_uk | endif
+     " if g:myLang == 1 | setlocal spell spelllang=pl | endif
      " if g:myLang == 1 | setlocal spell spelllang=eo    | endif
      " if g:myLang == 2 | setlocal spell spelllang=fr    | endif
      " if g:myLang == 3 | setlocal spell spelllang=it    | endif
@@ -370,5 +370,11 @@ imap <ESC>[H <C-O><Home>
 imap <ESC>[F <C-O><End>
 cmap <ESC>[H <Home>
 cmap <ESC>[F <End>
+
+noremap <F11> <Esc>:syntax sync fromstart<CR>
+inoremap <F11> <C-o>:syntax sync fromstart<CR>
+
+let &colorcolumn=join(range(81,81),",")
+syn on
 
 
