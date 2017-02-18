@@ -61,7 +61,7 @@ set textwidth=0
 set backup
 
 " I don't like 'set mouse=a' behavior because it changes the position of
-" the cursor when clicking in a window to give it focus.  I prefer 
+" the cursor when clicking in a window to give it focus.  I prefer
 " 'set mouse=vic'.
 " if has('mouse') | set mouse=vic | endif
 
@@ -111,7 +111,7 @@ set matchpairs+=<:>
 set virtualedit=block
 set display=lastline,uhex
 
-set tags=tags,~/tags,~/stl-tags
+set tags=/tags,~/tags,tags
 set thesaurus=~/mthesaur.txt
 
 if has('cscope')
@@ -154,7 +154,8 @@ imap <F3> <C-O>:set number!<CR><C-O>:set number?<CR>
 imap <F4> <C-O>:set hlsearch!<CR><C-O>:set hlsearch?<CR>
  map <F5>      :set list!<CR>:set list?<CR>
 imap <F5> <C-O>:set list!<CR><C-O>:set list?<CR>
-nnoremap <silent> <F6> :TlistToggle<CR>
+"Disabled - doesn't work
+"nnoremap <silent> <F6> :TlistToggle<CR>
 
 if has('spell')
   set spell
@@ -162,14 +163,14 @@ if has('spell')
   if has('eval')
     " Change language of spelling checker.
     let g:myLang = 0
-    let g:myLangList = [ "pl", "en_us"]
+    let g:myLangList = [ "en_gb", "pl"]
     let g:lingvoj= [ "język", "language:"]
     function! MySpellLang()
       let g:myLang = g:myLang + 1
       if g:myLang >= len(g:myLangList) | let g:myLang = 0 | endif
 
-      if g:myLang == 0 | setlocal spell spelllang=en_uk | endif
-     " if g:myLang == 1 | setlocal spell spelllang=pl | endif
+      if g:myLang == 0 | setlocal spell spelllang=en_gb | endif
+      if g:myLang == 1 | setlocal spell spelllang=pl | endif
      " if g:myLang == 1 | setlocal spell spelllang=eo    | endif
      " if g:myLang == 2 | setlocal spell spelllang=fr    | endif
      " if g:myLang == 3 | setlocal spell spelllang=it    | endif
@@ -189,12 +190,17 @@ endif
 nnoremap <F9> yyp<c-v>$r-
 inoremap <F9> <esc>yyp<c-v>$r-A
 
+" Disabled as nor working correctly
 " Tip #99: display syntax group under the cursor.
-map  <F10> :echo "hi<"
-\ . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
-\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
-\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name")
-\ . ">"<CR>
+"map  <F10> :echo "hi<"
+"\ . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+"\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+"\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name")
+"\ . ">"<CR>
+
+" Reloads syntax hight light from start
+noremap <F11> <Esc>:syntax sync fromstart<CR>
+inoremap <F11> <C-o>:syntax sync fromstart<CR>
 
 map  <F12> :!ctags -R --c++-kinds=+p --fields=+iaSn --extra=+q .<CR>
 
@@ -280,7 +286,7 @@ if !exists(':DiffOrig')
 endif
 
 if has('autocmd')
-  " Source .vimrc when I write it.  The nested keyword allows 
+  " Source .vimrc when I write it.  The nested keyword allows
   " autocommand ColorScheme to fire when sourcing ~/.vimrc.
   au! BufWritePost .vimrc nested source %
 
@@ -371,10 +377,11 @@ imap <ESC>[F <C-O><End>
 cmap <ESC>[H <Home>
 cmap <ESC>[F <End>
 
-noremap <F11> <Esc>:syntax sync fromstart<CR>
-inoremap <F11> <C-o>:syntax sync fromstart<CR>
 
 let &colorcolumn=join(range(81,81),",")
 syn on
 
+" Enable to load cscope database
+"set nocscopeverbose
+"cscope add ~/.cscope.out /your_path_to_sources
 
