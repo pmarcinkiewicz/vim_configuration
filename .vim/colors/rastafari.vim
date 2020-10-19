@@ -53,15 +53,15 @@ hi FoldColumn   guifg=#00aaaa guibg=#444444 gui=bold term=none     cterm=bold   
 hi SignColumn   guifg=#8888ff guibg=bg      gui=none term=none     cterm=none    ctermfg=cyan       ctermbg=black
 hi Search       guifg=#dddddd guibg=#0000ff gui=none term=none     cterm=none    ctermfg=white      ctermbg=blue
 hi IncSearch    guifg=#dddddd guibg=#008080 gui=none term=none     cterm=none    ctermfg=white      ctermbg=cyan
-hi WarningMsg   guifg=#ffff60 guibg=#008800 gui=bold term=none     cterm=bold    ctermfg=yellow     ctermbg=lightgreen
-hi Question     guifg=#80ff80 guibg=#008800 gui=bold term=standout cterm=bold    ctermfg=lightgreen ctermbg=lightgreen
-hi Pmenu        guifg=#80ff80 guibg=#008800 gui=bold term=standout cterm=none    ctermfg=green      ctermbg=green
+hi WarningMsg   guifg=#ffff60 guibg=#008800 gui=bold term=none     cterm=bold    ctermfg=yellow     ctermbg=cyan
+hi Question     guifg=#80ff80 guibg=#008800 gui=bold term=standout cterm=bold    ctermfg=red ctermbg=cyan
+hi Pmenu        guifg=#80ff80 guibg=#008800 gui=bold term=standout cterm=none    ctermfg=green      ctermbg=darkgrey
 hi PmenuSel     guifg=#ffcc00 guibg=#aa0000 gui=bold term=standout cterm=bold    ctermfg=yellow     ctermbg=red
-hi Visual       guifg=#66ff66 guibg=#008000 gui=bold term=standout cterm=bold    ctermfg=lightgreen      ctermbg=darkgreen
-hi TabLineFill  guifg=#80ff80 guibg=#008800 gui=bold term=bold     cterm=none    ctermfg=lightgreen ctermbg=green
-hi TabLine      guifg=#80ff80 guibg=#008800 gui=bold term=standout cterm=bold    ctermfg=lightgreen ctermbg=lightgreen
+hi Visual       guifg=#66ff66 guibg=#008000 gui=bold term=standout cterm=bold    ctermfg=red      ctermbg=darkgreen
+hi TabLineFill  guifg=#80ff80 guibg=#008800 gui=bold term=bold     cterm=none    ctermfg=red ctermbg=green
+hi TabLine      guifg=#80ff80 guibg=#008800 gui=bold term=standout cterm=bold    ctermfg=red ctermbg=white
 hi TabLineSel   guifg=#ffff60 guibg=#008800 gui=bold term=none     cterm=none    ctermfg=yellow     ctermbg=green
-hi VertSplit    guifg=#80ff80 guibg=#008800 gui=none term=none     cterm=none    ctermfg=lightgreen ctermbg=green
+hi VertSplit    guifg=#80ff80 guibg=#008800 gui=none term=none     cterm=none    ctermfg=red ctermbg=green
 hi TabLine      guifg=#66ff66 guibg=#008800 gui=bold term=bold     cterm=bold    ctermfg=green
 hi StatusLine   guifg=#66ff66 guibg=#008000 gui=bold term=none     cterm=bold    ctermfg=white
 hi CursorColumn guifg=NONE    guibg=#111111 gui=none term=none     cterm=none    ctermfg=black ctermbg=lightgrey
@@ -82,40 +82,40 @@ hi diffAdded    guifg=#80ff80 guibg=bg gui=none term=none cterm=none ctermfg=gre
 hi diffRemoved  guifg=#ff0000 guibg=bg gui=none term=none cterm=none ctermfg=red
 hi diffChanged  guifg=#0000ff guibg=bg gui=none term=none cterm=none ctermfg=blue
 " Specific for doxygen {{{1
-hi doxygenStart                guifg=#80ff80 guibg=bg gui=bold term=none cterm=none ctermfg=lightgreen
-hi doxygenStartL               guifg=#80ff80 guibg=bg gui=bold term=none cterm=none ctermfg=lightgreen
+hi doxygenStart                guifg=#80ff80 guibg=bg gui=bold term=none cterm=none ctermfg=cyan
+hi doxygenStartL               guifg=#80ff80 guibg=bg gui=bold term=none cterm=none ctermfg=cyan
 hi doxygenBriefLine            guifg=#00aa00 guibg=bg gui=none term=none cterm=none ctermfg=darkgreen
 hi doxygenBrief                guifg=#00aa00 guibg=bg gui=none term=none cterm=none ctermfg=darkgreen
 hi doxygenBriefL               guifg=#00aa00 guibg=bg gui=none term=none cterm=none ctermfg=darkgreen
-hi doxygenPrevL                guifg=#80ff80 guibg=bg gui=bold term=none cterm=none ctermfg=lightgreen
-hi doxygenComment              guifg=#80ff80 guibg=bg gui=bold term=none cterm=none ctermfg=lightgreen
+hi doxygenPrevL                guifg=#80ff80 guibg=bg gui=bold term=none cterm=none ctermfg=cyan
+hi doxygenComment              guifg=#80ff80 guibg=bg gui=bold term=none cterm=none ctermfg=cyan
 hi doxygenCommentL             guifg=#00aa00 guibg=bg gui=none term=none cterm=none ctermfg=darkgreen
 hi doxygenSpecialMultiLineDesc guifg=#00aa00 guibg=bg gui=none term=none cterm=none ctermfg=darkgreen
-hi doxygenSpecial              guifg=#80ff80 guibg=bg gui=none term=none cterm=none ctermfg=lightgreen
-hi doxygenParam                guifg=#80ff80 guibg=bg gui=bold term=none cterm=none ctermfg=lightgreen
+hi doxygenSpecial              guifg=#80ff80 guibg=bg gui=none term=none cterm=none ctermfg=cyan
+hi doxygenParam                guifg=#80ff80 guibg=bg gui=bold term=none cterm=none ctermfg=cyan
 hi doxygenParamName            guifg=#3333ff guibg=bg gui=bold term=none cterm=none ctermfg=blue
 hi doxygenParamDirection       guifg=#ffff60 guibg=bg gui=bold term=none cterm=none ctermfg=yellow
 hi doxygenArgumentWord         guifg=#3333ff guibg=bg gui=none term=none cterm=none ctermfg=blue
 hi doxygenCodeWord             guifg=#3333ff guibg=bg gui=bold term=none cterm=none ctermfg=blue
 hi doxygenHyperLink            guifg=#3333ff guibg=bg gui=bold term=none cterm=none ctermfg=blue
 " Specific for Vim script {{{1
-hi vimCommentTitle guifg=#80ff80 guibg=bg      gui=bold term=none cterm=none ctermfg=lightgreen
+hi vimCommentTitle guifg=#80ff80 guibg=bg      gui=bold term=none cterm=none ctermfg=red
 hi vimHiCtermColor guifg=#ffff60 guibg=bg      gui=none term=none cterm=none ctermfg=yellow
 hi vimFold         guifg=#888888 guibg=#222222 gui=none term=none cterm=none ctermfg=darkgrey ctermbg=grey
 " Specific for help files {{{1
 hi helpHyperTextJump guifg=#ffaa00 guibg=bg gui=none term=none cterm=none ctermfg=darkyellow
 " Specific for Perl {{{1
-hi perlSharpBang        guifg=#80ff80 guibg=bg gui=bold term=standout cterm=bold ctermfg=lightgreen
+hi perlSharpBang        guifg=#80ff80 guibg=bg gui=bold term=standout cterm=bold ctermfg=cyan
 hi perlStatement        guifg=#aaaaaa guibg=bg gui=none term=none     cterm=none ctermfg=grey
 hi perlStatementStorage guifg=#dddddd guibg=bg gui=bold term=none     cterm=none ctermfg=white
 hi perlVarPlain         guifg=#aaaaaa guibg=bg gui=none term=none     cterm=none ctermfg=grey
 hi perlVarPlain2        guifg=#aaaaaa guibg=bg gui=none term=none     cterm=none ctermfg=grey
 " Specific for Ruby {{{1
-hi rubySharpBang guifg=#80ff80 guibg=bg gui=bold term=none cterm=bold ctermfg=lightgreen
+hi rubySharpBang guifg=#80ff80 guibg=bg gui=bold term=none cterm=bold ctermfg=cyan
 " Specific for the statusline {{{1
 " My ~/.vimrc uses User1 and User2 in active statusline.
-hi User1 guifg=#66ff66 guibg=#008000 gui=bold term=standout cterm=bold ctermfg=lightgreen ctermbg=lightgreen
-hi User2 guifg=#ffff60 guibg=#008000 gui=bold term=none     cterm=bold ctermfg=green ctermbg=lightgreen
+hi User1 guifg=#66ff66 guibg=#008000 gui=bold term=standout cterm=bold ctermfg=red ctermbg=lightgreen
+hi User2 guifg=#ffff60 guibg=#008000 gui=bold term=none     cterm=bold ctermfg=red ctermbg=lightgreen
 " My ~/.vimrc uses User3 and User4 in non-active statusline.
 hi User3 guifg=#66ff66 guibg=#008000 gui=bold term=standout cterm=bold ctermfg=green ctermbg=black
 hi User4 guifg=#66ff66 guibg=#008000 gui=bold term=none     cterm=bold ctermfg=green ctermbg=black
